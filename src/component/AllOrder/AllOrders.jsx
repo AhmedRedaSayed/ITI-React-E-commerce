@@ -12,18 +12,17 @@ export default function AllOrders() {
   useEffect(() => {
     (async () => {
       let data = await getAllOrder();
-      console.log(data);
+     
       if (data?.response?.data.statusMsg == "fail") {
-        console.log(data);
+     
         setData(null);
         setLoading(false);
       } else {
         setData(data);
-        console.log(data);
-        console.log(data.length);
+       
         setLoading(false);
       }
-      // console.log(data);
+      
       setLoading(false);
     })();
   }, []);

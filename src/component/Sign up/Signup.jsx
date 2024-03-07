@@ -43,7 +43,6 @@ export default function Signup() {
         "https://ecommerce.routemisr.com/api/v1/auth/signup",
         values
       );
-      console.log(data);
       if (data.message == "success") {
         toast.success("Register success");
         naviagte("/signin");
@@ -54,7 +53,6 @@ export default function Signup() {
       setErrorMsg(error.response.data.message);
       setLoading(true);
       const detailedErrors = error.response.data.errors;
-      console.log("Detailed Errors:", detailedErrors);
     }
   }
   let Register = useFormik({
@@ -67,7 +65,6 @@ export default function Signup() {
     },
     validationSchema: validateScheme,
     onSubmit: (values) => {
-      console.log(values);
       sendSignUpDataToApi(values);
     },
   });

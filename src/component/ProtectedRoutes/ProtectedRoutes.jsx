@@ -5,10 +5,8 @@ export default function ProtectedRoutes({ children }) {
   let token = localStorage.getItem("token");
   let userId = localStorage.getItem("userId");
   JSON.parse(userId);
-  console.log(JSON.parse(userId));
   try {
     const decoded = jwtDecode(token);
-    console.log(decoded);
     localStorage.setItem("userId", JSON.stringify(decoded.id));
     localStorage.setItem("userName", JSON.stringify(decoded.name));
   } catch (error) {

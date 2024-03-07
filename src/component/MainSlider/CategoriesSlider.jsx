@@ -44,7 +44,7 @@ export default function CategoriesSlider() {
       "https://ecommerce.routemisr.com/api/v1/categories"
     );
     setCategoriesSlider(data.data);
-    console.log("categ", data.data);
+    
   }
   useEffect(() => {
     getCategoriesSliderApi();

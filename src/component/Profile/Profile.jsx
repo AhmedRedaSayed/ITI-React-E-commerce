@@ -3,7 +3,6 @@ import { jwtDecode } from "jwt-decode";
 export default function Profile() {
   let encodedToken = localStorage.getItem("token"); 
   let decodedToken = jwtDecode(encodedToken);
-  console.log(decodedToken);
   return (
     <>
       <h1

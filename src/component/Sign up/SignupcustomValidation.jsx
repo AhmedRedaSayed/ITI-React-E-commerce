@@ -53,7 +53,7 @@ export default function SignupcustomValidation() {
               {Register.errors.name}
             </div>
           ) : (
-            console.log("no")
+            ''
           )}
 
           <label htmlFor="email">Email:</label>
@@ -81,7 +81,7 @@ export default function SignupcustomValidation() {
               {Register.errors.phone}
             </div>
           ) : (
-            console.log("no")
+           ''
           )}
 
           <label htmlFor="password">Password:</label>

@@ -22,7 +22,7 @@ export default function ForgotPass() {
         "https://ecommerce.routemisr.com/api/v1/auth/forgotPasswords",
         values
       );
-      console.log(data);
+     
       if (data.statusMsg == "success") {
         toast.success(data.message);
         naviagte("/restCode");
@@ -41,7 +41,7 @@ export default function ForgotPass() {
     },
     validationSchema: validateScheme,
     onSubmit: (values) => {
-      console.log(values);
+      
       forgotPassDataToApi(values);
     },
   });

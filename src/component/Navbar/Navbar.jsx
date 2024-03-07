@@ -21,14 +21,12 @@ export default function Navbar() {
   useEffect(() => {
     (async () => {
       let data = await getCart();
-      console.log(data);
       setCounter(data.numOfCartItems);
     })();
   }, []);
   useEffect(() => {
     (async () => {
       let data = await getWishList();
-      console.log(data);
       setwishlistCounter(data.data?.length);
     })();
   }, []);

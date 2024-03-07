@@ -10,7 +10,6 @@ export default function SubCategories() {
     let Subcategories = axios
       .get(`https://ecommerce.routemisr.com/api/v1/subcategories/${id.myId}`)
       .then((response) => {
-        console.log("API Response:", response.data);
         return response.data;
       });
 
@@ -22,8 +21,7 @@ export default function SubCategories() {
     refetchInterval: 5000,
   });
   const subCategories = data?.data;
-  console.log("data", data);
-  console.log("data", subCategories);
+
 
   if (isLoading) return <Loading />;
 

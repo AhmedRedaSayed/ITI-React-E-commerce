@@ -16,8 +16,7 @@ export default function Categories() {
     cacheTime: 3000,
     refetchInterval: 5000, 
   });
-  console.log("data", data);
-  console.log("data", data?.data.data);
+
   if (isLoading) return <Loading />;
 
   return (

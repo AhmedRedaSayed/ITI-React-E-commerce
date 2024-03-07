@@ -26,7 +26,7 @@ export default function Wishlist() {
     setBtnLoading(false);
     let data = await addToCart(productId);
 
-    console.log(data);
+    
     if (data.status == "success") {
       setBtnLoading(true);
       toast.success("Product added successfuly");
@@ -43,12 +43,11 @@ export default function Wishlist() {
         setLoading(false);
       } else {
         setData(data);
-        console.log(data);
-        console.log(data.data);
+       
 
         setLoading(false);
       }
-      // console.log(data);
+     
       setLoading(false);
     })();
   }, []);
@@ -57,7 +56,7 @@ export default function Wishlist() {
     setBtnRemoveWishlistLoading(false);
     let data = await deleteItemFromWishList(id);
 
-    console.log(data);
+   
     if (data.status == "success") {
       toast.error("product remove from wishlist successfully");
       setBtnRemoveWishlistLoading(true);

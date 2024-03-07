@@ -26,13 +26,13 @@ export default function ProductDetails() {
     setwishlistCounter,
   } = useContext(StoreContext);
   let x = useParams();
-  console.log(x);
+  
   let [btnLoading, setBtnLoading] = useState(true);
   async function addProductToCart(productId) {
     setBtnLoading(false);
     let data = await addToCart(productId);
 
-    console.log(data);
+    
     if (data.status == "success") {
       toast.success("Product added successfuly");
       setBtnLoading(true);
@@ -43,11 +43,11 @@ export default function ProductDetails() {
     setBtnWishlistLoading(false);
     let data = await addToWishList(productId);
 
-    console.log("wishlist", data);
+   
     if (data.status == "success") {
       toast.success("Product added to Wish List Successfully!");
       setBtnWishlistLoading(true);
-      console.log(data.data.length);
+      
       setwishlistCounter(data.data.length);
     }
   }

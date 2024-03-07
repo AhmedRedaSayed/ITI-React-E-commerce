@@ -18,7 +18,7 @@ export default function Cart() {
         setLoading(false);
       } else {
         setData(data);
-        console.log(data);
+      
         setLoading(false);
       }
       setLoading(false);
@@ -29,7 +29,7 @@ export default function Cart() {
     setBtnLoading(false);
     let data = await deleteItem(id);
 
-    console.log(data);
+  
     if (data.status == "success") {
       toast.error("product deleted successfully");
       setBtnLoading(true);
@@ -40,7 +40,7 @@ export default function Cart() {
   async function updateProductQTY(id, count) {
     let data = await updateQTY(id, count);
 
-    console.log(data);
+    
     if (data.status == "success") {
       toast.success("product updated successfully");
       setCounter(data.numOfCartItems);

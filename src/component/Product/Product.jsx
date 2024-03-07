@@ -23,8 +23,7 @@ export default function Product({ item }) {
       if (data?.response?.data.statusMsg == "fail") {
       } else {
         setData(data);
-        console.log(data);
-        console.log(data.data);
+     
       }
     })();
   }, []);
@@ -33,7 +32,7 @@ export default function Product({ item }) {
     setBtnLoading(false);
     let data = await addToCart(productId);
 
-    console.log(data);
+   
     if (data.status == "success") {
       toast.success("Product added successfuly");
       setBtnLoading(true);

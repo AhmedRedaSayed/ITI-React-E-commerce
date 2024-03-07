@@ -30,7 +30,6 @@ export default function Signin() {
         "https://ecommerce.routemisr.com/api/v1/auth/signin",
         values
       );
-      console.log(data);
       if (data.message == "success") {
         toast.success(" Login Success ");
         localStorage.setItem("token", data.token);
@@ -42,7 +41,6 @@ export default function Signin() {
       setErrorMsg(error.response.data.message);
       setLoading(true);
       const detailedErrors = error.response.data.errors;
-      console.log("Detailed Errors:", detailedErrors);
     }
   }
   let Login = useFormik({
@@ -52,7 +50,6 @@ export default function Signin() {
     },
     validationSchema: validateScheme,
     onSubmit: (values) => {
-      console.log(values);
       sendSignInDataToApi(values);
     },
   });

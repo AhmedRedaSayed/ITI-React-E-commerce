@@ -37,7 +37,7 @@ export default function ResetCode() {
     },
     validationSchema: validateScheme,
     onSubmit: (values) => {
-      console.log(values);
+    
       sendCodeDataToApi(values);
     },
   });

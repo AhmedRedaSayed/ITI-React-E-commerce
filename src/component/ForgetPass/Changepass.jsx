@@ -31,7 +31,7 @@ export default function Changepass() {
       );
      
       if (response.status >= 200 && response.status < 300) {
-        console.log(response.data);
+      
         toast.success("password changed successfully");
         localStorage.removeItem("token");
         naviagte("/home");
@@ -55,7 +55,7 @@ export default function Changepass() {
     },
     validationSchema: validateScheme,
     onSubmit: (values) => {
-      console.log(values);
+    
       sendNewPassDataToApi(values);
     },
   });

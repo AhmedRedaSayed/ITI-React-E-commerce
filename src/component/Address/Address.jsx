@@ -13,7 +13,7 @@ export default function Address() {
   async function sendPayDataToApi(values) {
     setLoading(false);
     let data = await pay(id, values).catch((err) => console.log(err));
-    console.log(data);
+  
     setLoading(true);
     if (data.status == "success") {
       window.location.href = data.session.url;
@@ -26,7 +26,6 @@ export default function Address() {
       city: "",
     },
     onSubmit: (values) => {
-      console.log(values);
       sendPayDataToApi(values);
     },
   });
