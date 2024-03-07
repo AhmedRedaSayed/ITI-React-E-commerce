@@ -11,7 +11,7 @@ export default function NotFound() {
         minHeight: "100vh",
       }}
     >
-      <img src={error} alt="" className="" />
+      Page Not Found
     </div>
   );
 }
